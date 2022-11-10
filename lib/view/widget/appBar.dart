@@ -9,7 +9,7 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
   List<PollutionModel>? pollution;
   CAppBar({Key? key, this.values, this.pollution}) : super(key: key);
   @override
-  Size get preferredSize => const Size.fromHeight(199.0);
+  Size get preferredSize => const Size.fromHeight(205.0);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
         //     const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
         child: Center(
           child: Container(
-            height: 155,
+            height: 166,
             width: MediaQuery.of(context).size.width - 33,
             color: Color(0xffE5E5E5),
             child: Padding(
