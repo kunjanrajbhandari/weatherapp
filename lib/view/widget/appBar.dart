@@ -64,12 +64,14 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Container(
                     color: Colors.blue,
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
                           // height: 77,
                           width: MediaQuery.of(context).size.width / 2.2,
                           child: ListView.builder(
+                              padding: EdgeInsets.zero,
                               itemCount: values!.length,
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,
