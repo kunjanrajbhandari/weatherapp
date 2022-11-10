@@ -116,6 +116,8 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
                           width: MediaQuery.of(context).size.width / 4,
                           child: ListView.builder(
                               shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              padding: EdgeInsets.zero,
                               itemCount: pollution!.length,
                               scrollDirection: Axis.vertical,
                               itemBuilder: (context, index) {
