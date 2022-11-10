@@ -71,45 +71,40 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
                           // height: 77,
                           width: MediaQuery.of(context).size.width / 2.2,
                           child: ListView.builder(
+                              physics: NeverScrollableScrollPhysics(),
                               padding: EdgeInsets.zero,
                               itemCount: values!.length,
                               shrinkWrap: true,
                               scrollDirection: Axis.vertical,
                               itemBuilder: (context, index) {
-                                return Column(
+                                return Row(
                                   children: [
-                                    Row(
-                                      children: [
-                                        const Icon(
-                                          Icons.location_pin,
-                                          color: Colors.black,
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 11.0),
-                                          child: RichText(
-                                              text: TextSpan(
-                                                  text:
-                                                      '${values![index].cityName}, ',
-                                                  style: const TextStyle(
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.normal,
-                                                      fontSize: 17.0),
-                                                  children: [
-                                                TextSpan(
-                                                  text:
-                                                      '${values![index].countryName}',
-                                                  style: TextStyle(
-                                                      color: Colors.black
-                                                          .withOpacity(0.5),
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      fontSize: 15.0),
-                                                ),
-                                              ])),
-                                        ),
-                                      ],
+                                    const Icon(
+                                      Icons.location_pin,
+                                      color: Colors.black,
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 11.0),
+                                      child: RichText(
+                                          text: TextSpan(
+                                              text:
+                                                  '${values![index].cityName}, ',
+                                              style: const TextStyle(
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.normal,
+                                                  fontSize: 17.0),
+                                              children: [
+                                            TextSpan(
+                                              text:
+                                                  '${values![index].countryName}',
+                                              style: TextStyle(
+                                                  color: Colors.black
+                                                      .withOpacity(0.5),
+                                                  fontWeight: FontWeight.w400,
+                                                  fontSize: 15.0),
+                                            ),
+                                          ])),
                                     ),
                                   ],
                                 );
